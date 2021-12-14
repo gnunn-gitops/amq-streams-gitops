@@ -46,4 +46,22 @@ argocd-argocd-redis-ha                 2021-12-14T21:09:46Z
 argocd-argocd-server                   2021-12-14T21:09:46Z
 ```
 
-7.
+7. Get the `admin` password:
+
+```
+oc get secret/argocd-cluster -n int-tools -o jsonpath='{.data.admin\.password}' | base64 -d
+```
+
+8. Login into Argo CD using `admin` as the user and the password
+
+9. Click on the Gear icon on the left bar and select `Cluster` and then select `in-cluster`, confirm that int-dev and int-tools are shown as the namespaces
+
+10. Create a new application as follows:
+
+Application Name - Kafka Dev
+Project - default
+Sync Policy - Automatic
+Self Heal - Checked
+Repository URL - https://github.com/gnunn-gitops/amq-streams-gitops
+Branch - Main
+Path - kafka/overlays/dev
