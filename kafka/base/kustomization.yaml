@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
 - kafka.yaml
 - metrics-cm.yaml
-- podmonitor-kafka.yaml
+# - podmonitor-kafka.yaml
