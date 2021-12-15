@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - kafka.yaml
 - metrics-cm.yaml
+- kafka-topic.yaml
