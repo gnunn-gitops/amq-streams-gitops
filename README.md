@@ -71,3 +71,5 @@ Path - kafka/overlays/dev
 ![alt text](https://raw.githubusercontent.com/gnunn-gitops/amq-streams-gitops/main/docs/img/argocd-application.png)
 
 11. Wait for application to synchronize and then confirm that kafka is deployed in int-dev namespace
+
+![alt text](https://raw.githubusercontent.com/gnunn-gitops/amq-streams-gitops/main/docs/img/argocd-sync.png)
