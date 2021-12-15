@@ -60,13 +60,13 @@ oc get secret/argocd-cluster -n int-tools -o jsonpath='{.data.admin\.password}' 
 
 10. Create a new application as follows:
 
-Application Name - Kafka Dev
-Project - default
-Sync Policy - Automatic
-Self Heal - Checked
-Repository URL - https://github.com/gnunn-gitops/amq-streams-gitops
-Branch - Main
-Path - kafka/overlays/dev
+* Application Name - Kafka Dev
+* Project - default
+* Sync Policy - Automatic
+* Self Heal - Checked
+* Repository URL - https://github.com/gnunn-gitops/amq-streams-gitops
+* Branch - Main
+* Path - kafka/overlays/dev
 
 ![alt text](https://raw.githubusercontent.com/gnunn-gitops/amq-streams-gitops/main/docs/img/argocd-application.png)
 
