@@ -56,6 +56,8 @@ oc get secret/argocd-cluster -n int-tools -o jsonpath='{.data.admin\.password}' 
 
 9. Click on the Gear icon on the left bar and select `Cluster` and then select `in-cluster`, confirm that int-dev and int-tools are shown as the namespaces
 
+![alt text](https://raw.githubusercontent.com/gnunn-gitops/amq-streams-gitops/main/docs/img/argocd-namespace-mode.png)
+
 10. Create a new application as follows:
 
 Application Name - Kafka Dev
@@ -65,3 +67,7 @@ Self Heal - Checked
 Repository URL - https://github.com/gnunn-gitops/amq-streams-gitops
 Branch - Main
 Path - kafka/overlays/dev
+
+![alt text](https://raw.githubusercontent.com/gnunn-gitops/amq-streams-gitops/main/docs/img/argocd-application.png)
+
+11. Wait for application to synchronize and then confirm that kafka is deployed in int-dev namespace
